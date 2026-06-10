@@ -1,0 +1,51 @@
+
+body {
+    background-color: rgb(31, 107, 60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+    #Logo {
+    width: 300px;
+    height: 300px;
+}
+
+#Startbutton {
+    background-color: rgb(242, 194, 48);
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 5px solid #165C26;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.openings {
+    font-family: Arial, sans-serif;
+    color: white;
+    flex-direction: column;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
