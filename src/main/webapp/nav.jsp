@@ -1,21 +1,22 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html id="navbarhtml">
 <head>
   <title></title>
   <style>
-    html, body {
+    #navbarhtml, #navbarbody{
       margin: 0;
       padding: 0;
       width: 100%;
     }
     #navbar {
       position: sticky;
+      align-self: stretch;
+      box-sizing: border-box;
       top: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
       background-color: rgb(31, 107, 60);
     }
     #navbar img{
@@ -35,16 +36,19 @@
       font-weight: bold;
       font-size: 30px;
       text-decoration: none;
+      padding: 15px;
     }
   </style>
 </head>
-<body>
+<body id="navbarbody">
 
   <nav id="navbar">
+    <a href="start.jsp">
     <img src="images/Logo.png" alt="Logo">
+    </a>
     <ul>
+      <li><a href="#us">Über uns</a></li>
       <li><a href="menu.jsp">Menü</a></li>
-      <li><a href="about.jsp">Über uns</a></li>
       <li><a href="contact.jsp">Kontakt</a></li>
     </ul>
   </nav>

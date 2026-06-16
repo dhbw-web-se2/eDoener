@@ -2,6 +2,13 @@
 <html>
 <head>
     <title>Homepage</title>
+    <style>
+        #us{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+        }
+    </style>
 </head>
     <body class="page-enter">
     <script>
@@ -12,5 +19,8 @@
         <header>
             <jsp:include page="nav.jsp"/>
         </header>
+        <div id="us">
+            <jsp:include page="us.jsp"/>
+        </div>
     </body>
 </html>

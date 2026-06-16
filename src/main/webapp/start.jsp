@@ -25,7 +25,7 @@
         }
     </style>
 </head>
-<body>
+<body class="startpage">
         <div class="wrap">
 
             <div class="container">
