@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Checkout</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/checkout.css">
 </head>
-<body>
+<body class="checkout-page">
+<main class="checkout-box">
 <h1>Lieferdaten</h1>
 
 <% String error = (String) request.getAttribute("error"); %>
 <% if (error != null) { %>
-<p style="color: #b30000;"><%= error %></p>
+<p class="checkout-error"><%= error %></p>
 <% } %>
 
 <form id="checkoutForm" action="checkout" method="post">
@@ -36,6 +38,7 @@
 
     <button type="submit">Bestellung abschicken</button>
 </form>
+</main>
 
 <script src="js/checkout.js"></script>
 </body>

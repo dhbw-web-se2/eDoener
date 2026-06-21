@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bestellung erfolgreich</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/success.css">
 </head>
-<body>
+<body class="success-page">
+<main class="success-box">
 <%
     OrderBean order = (OrderBean) session.getAttribute("lastOrder");
 %>
@@ -25,6 +27,7 @@
 <% } %>
 
 <p><a href="start.jsp">Zurueck zur Startseite</a></p>
+</main>
 </body>
 </html>
 
