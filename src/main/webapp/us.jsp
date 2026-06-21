@@ -12,17 +12,23 @@
     <meta charset="UTF-8">
     <title>Über uns - eDöner</title>
     <style>
-        body {
-
-            font-family: Arial, sans-serif;
-            margin: 0;
-
+        .us-page {
             background:
                     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                     url('images/Doener1.jpg');
 
             background-size: cover;
             background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            width: 100%;
+            min-height: 100vh;
+        }
+        body {
+
+
+
+
 
 
         }
@@ -45,7 +51,7 @@
             background-color: rgba(255, 255, 255, 0.9);
             color: #222;
             padding: 20px;
-            margin-bottom: 25px;
+            margin: 0 auto 25px auto;
 
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
@@ -57,6 +63,7 @@
 </head>
 
 <body id="usbody">
+<div class="us-page">
 
 <h1 id="ush1">Traditioneller Döner – neu interpretiert</h1>
 
@@ -90,10 +97,10 @@
     </p>
 
     <ol type="I">
-        <li>eDöner Knoblauchsoße</li>
-        <li>eDöner Cocktailsoße</li>
-        <li>eDöner Feuersoße</li>
-        <li>eDöner Sweet Currysoße</li>
+        <li>eDöner Knoblauchsoße 🧄</li>
+        <li>eDöner Cocktailsoße 🍹</li>
+        <li>eDöner Feuersoße 🔥</li>
+        <li>eDöner Sweet Currysoße 🍛</li>
     </ol>
 </section>
 
@@ -104,6 +111,6 @@
         <li>Happy Hour: täglich von 18:00–19:00 Uhr → nur 7,00€</li>
     </ul>
 </section>
-
+</div>
 </body>
 </html>

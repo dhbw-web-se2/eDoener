@@ -4,6 +4,7 @@
     <title>Homepage</title>
     <style>
         #us{
+                margin-top: 120px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -21,6 +22,10 @@
         </header>
         <div id="us">
             <jsp:include page="us.jsp"/>
+        </div>
+
+        <div id="contact">
+            <jsp:include page="contact.jsp"/>
         </div>
     </body>
 </html>

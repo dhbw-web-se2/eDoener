@@ -10,13 +10,16 @@
       width: 100%;
     }
     #navbar {
-      position: sticky;
-      align-self: stretch;
-      box-sizing: border-box;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      width: 100%;
+
       top: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 10px 30px;
       background-color: rgb(31, 107, 60);
     }
     #navbar img{
@@ -27,8 +30,8 @@
       display: flex;
       list-style: none;
       margin: 0;
-      padding: 0;
-      gap: 20px;
+      padding-right: 50px;
+      gap: 50px;
     }
     #navbar ul li a{
       color: white;
@@ -49,7 +52,7 @@
     <ul>
       <li><a href="#us">Über uns</a></li>
       <li><a href="menu.jsp">Menü</a></li>
-      <li><a href="contact.jsp">Kontakt</a></li>
+      <li><a href="#contact">Kontakt</a></li>
     </ul>
   </nav>
 
