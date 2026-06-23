@@ -1,0 +1,40 @@
+.success-page {
+    background-color: rgb(31, 107, 60);
+    color: rgb(242, 194, 48);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-box {
+    width: min(90%, 560px);
+    padding: 30px;
+    border: 5px solid rgb(242, 194, 48);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.success-box h1 {
+    margin-top: 0;
+}
+
+.success-box strong {
+    color: #fff9d6;
+}
+
+.success-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: rgb(242, 194, 48);
+    border: 5px solid #165C26;
+    border-radius: 10px;
+    color: #165C26;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
