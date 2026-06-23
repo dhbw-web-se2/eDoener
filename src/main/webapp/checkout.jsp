@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="de">
@@ -12,10 +13,11 @@
 <main class="checkout-box">
 <h1>Lieferdaten</h1>
 
-<% String error = (String) request.getAttribute("error"); %>
-<% if (error != null) { %>
-<p class="checkout-error"><%= error %></p>
-<% } %>
+<c:if test="${not empty error}">
+    <p class="checkout-error">
+        <c:out value="${error}" />
+    </p>
+</c:if>
 
 <form id="checkoutForm" action="checkout" method="post">
     <label for="customerName">Name *</label><br/>
