@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html id="navbarhtml">
 <head>
@@ -14,7 +13,6 @@
       z-index: 1000;
       left: 0;
       width: 100%;
-
       top: 0;
       display: flex;
       justify-content: space-between;
@@ -46,16 +44,16 @@
 <body id="navbarbody">
 
   <nav id="navbar">
-    <a href="start.jsp">
-    <img src="images/Logo.png" alt="Logo">
+    <a href="${pageContext.request.contextPath}/start.jsp">
+      <img src="${pageContext.request.contextPath}/images/Logo.png" alt="Logo">
     </a>
     <ul>
-      <li><a href="#us">Über uns</a></li>
-      <li><a href="menu.jsp">Menü</a></li>
-      <li><a href="#contact">Kontakt</a></li>
+      <li><a href="${pageContext.request.contextPath}/homepage.jsp#us">Über uns</a></li>
+      <li><a href="${pageContext.request.contextPath}/menu.jsp">Menü</a></li>
+      <li><a href="${pageContext.request.contextPath}/cart">Warenkorb</a></li>
+      <li><a href="${pageContext.request.contextPath}/homepage.jsp#contact">Kontakt</a></li>
     </ul>
   </nav>
-
 
 </body>
 </html>
