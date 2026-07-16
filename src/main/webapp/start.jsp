@@ -32,7 +32,7 @@
                 <img id="Logo" src="images/Logo.png" alt="Logo">
 
                 <div class="openings">
-                    <h2>Öffnungszeiten</h2>
+                    <h2 id="starth2">Öffnungszeiten</h2>
                     <p>Montag-Freitag: 11:45-21:00</p>
                     <p>Samstag-Sonntag: 11:45-22:00</p>
                 </div>

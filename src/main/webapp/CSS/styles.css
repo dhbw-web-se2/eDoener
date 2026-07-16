@@ -1,4 +1,19 @@
-
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.buttons{
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: rgb(31, 107, 60);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#starth2{
+    color: white;
+}
 .startpage {
     background-color: rgb(31, 107, 60);
     display: flex;
@@ -50,9 +65,192 @@
     gap: 20px;
 }
 #contact {
-    margin-top: 100px;
+    margin-top: 0px;
 }
 #us {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
+}
+/*nav.jsp css ------------------------------------------------------*/
+#navbarhtml, #navbarbody{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#navbar {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    width: 100%;
+
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: rgb(31, 107, 60);
+}
+#navbar img{
+    width: 100px;
+    height: 100px;
+}
+#navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-right: 50px;
+    gap: 50px;
+}
+#navbar ul li a{
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 15px;
+}
+/* contact.jsp css ------------------------------------------------------*/
+.contact-page {
+
+}
+#contact-body {
+    background-color: rgb(31, 107, 60);
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 80%;
+}
+.conatiner_contact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 30px;
+}
+#contact-body h1, h2 {
+    text-align: center;
+    color: #165C26;
+    margin: 0;
+
+}
+.map, .contact {
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    width: 50%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+}
+#map-img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+.row{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.contact{
+    padding: 10px;
+}
+.row input{
+    flex: 1;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+.full{
+    width: 98%;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
+.contact button {
+    width: 98%;
+    height: 50px;
+    padding: 10px;
+    background-color: #1f6b3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+.header_contact{
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+
+}
+/* us.jsp css ------------------------------------------------------*/
+#usbody {
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url('../images/Doener1.jpg');
+
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+}
+#ush1 {
+    text-align: center;
+    color: white;
+    margin: 40px 0;
+}
+
+#ush2 {
+    color: #165C26;
+    margin-bottom: 10px;
+}
+
+#us-sections {
+
+    width: 60%;
+    max-width: 700px;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #222;
+    padding: 20px;
+    margin: 0 auto 25px auto;
+    opacity: 0.9;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+
+    text-align: left;
+
+}
+/*contact_processing.jsp css ------------------------------------------------------*/
+#process_body{
+    background-color: #1f6b3c;
+    display: grid;
+    place-items: center;
+}
+#contact_processing_div{
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 20px auto 25px auto;
+    width: 80%;
+}
+#process_h1{
+    color: #165C26;
+}
+#process-logo{
+    width: 300px;
+    height: 300px;
+}
