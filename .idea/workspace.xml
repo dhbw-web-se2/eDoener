@@ -9,14 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ea263ad-dad2-4acc-bb40-c880caee6261" name="Changes" comment="Contact.jsp steht und ist eingebunden soweit. Ich mach jetzt nur noch eine Weiterverarbeitung des contact.jsp und guck ob ich die css so lasse oder alles in styles.css reinmache.">
+    <list default="true" id="4ea263ad-dad2-4acc-bb40-c880caee6261" name="Changes" comment="Verarbeitung für das Formular ist fertig und alle internen CSS Objekte innerhalb der Dateien habe ich ins styles.css verschoben.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/CSS/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/CSS/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/nav.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/nav.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/start.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/start.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/us.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/us.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -236,7 +232,8 @@
       <workItem from="1783593706512" duration="1561000" />
       <workItem from="1783926673703" duration="34000" />
       <workItem from="1784115329729" duration="8430000" />
-      <workItem from="1784194391729" duration="4305000" />
+      <workItem from="1784194391729" duration="4438000" />
+      <workItem from="1784289482650" duration="1999000" />
     </task>
     <task id="LOCAL-00001" summary="Navigations seite ist fertig. Das könnt ihr mit &lt;jsp:include page=&quot;nav.jsp&quot;/&gt; bei euch includen wenn es Sinn macht. Hab auch einen kleinen Übergang von start.jsp zu homepage.jsp gebaut. Cleaner wird es glaub ich nicht.">
       <option name="closed" value="true" />
@@ -278,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782047901459</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Verarbeitung für das Formular ist fertig und alle internen CSS Objekte innerhalb der Dateien habe ich ins styles.css verschoben.">
+      <option name="closed" value="true" />
+      <created>1784199529631</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1784199529631</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +293,8 @@
     <MESSAGE value="Navigations seite ist fertig. Das könnt ihr mit &lt;jsp:include page=&quot;nav.jsp&quot;/&gt; bei euch includen wenn es Sinn macht. Hab auch einen kleinen Übergang von start.jsp zu homepage.jsp gebaut. Cleaner wird es glaub ich nicht." />
     <MESSAGE value="Über uns Seite ist jetzt fertig." />
     <MESSAGE value="Contact.jsp steht und ist eingebunden soweit. Ich mach jetzt nur noch eine Weiterverarbeitung des contact.jsp und guck ob ich die css so lasse oder alles in styles.css reinmache." />
-    <option name="LAST_COMMIT_MESSAGE" value="Contact.jsp steht und ist eingebunden soweit. Ich mach jetzt nur noch eine Weiterverarbeitung des contact.jsp und guck ob ich die css so lasse oder alles in styles.css reinmache." />
+    <MESSAGE value="Verarbeitung für das Formular ist fertig und alle internen CSS Objekte innerhalb der Dateien habe ich ins styles.css verschoben." />
+    <option name="LAST_COMMIT_MESSAGE" value="Verarbeitung für das Formular ist fertig und alle internen CSS Objekte innerhalb der Dateien habe ich ins styles.css verschoben." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

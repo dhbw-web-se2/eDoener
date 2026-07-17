@@ -28,5 +28,9 @@
         <div id="contact">
             <jsp:include page="contact.jsp"/>
         </div>
+
+        <div id="footer">
+            <jsp:include page="footer.jsp"/>
+        </div>
     </body>
 </html>

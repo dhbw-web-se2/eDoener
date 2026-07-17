@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 .buttons{
     font-family: Arial, sans-serif;
@@ -69,6 +70,10 @@ html, body {
 }
 #us {
     margin-bottom: 0px;
+    scroll-margin-top: 120px;
+}
+#contact {
+    scroll-margin-top: 120px;
 }
 /*nav.jsp css ------------------------------------------------------*/
 #navbarhtml, #navbarbody{
@@ -253,4 +258,17 @@ html, body {
 #process-logo{
     width: 300px;
     height: 300px;
+}
+/*footer.jsp css ------------------------------------------------------*/
+#footerbar{
+    display: flex;
+    background-color: #14492A;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    color: white;
+}
+footer img{
+    width: 100px;
+    height: 100px;
 }
