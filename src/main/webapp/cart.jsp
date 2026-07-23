@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Warenkorb</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/styles.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/cart.css">
 </head>
 <body class="cart-page">
