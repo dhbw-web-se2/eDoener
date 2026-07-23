@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" href="CSS/styles.css">
     <title>Homepage</title>
     <style>
         #us{
@@ -26,6 +27,10 @@
 
         <div id="contact">
             <jsp:include page="contact.jsp"/>
+        </div>
+
+        <div id="footer">
+            <jsp:include page="footer.jsp"/>
         </div>
     </body>
 </html>

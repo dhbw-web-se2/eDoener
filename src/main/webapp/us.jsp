@@ -6,67 +6,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>Über uns - eDöner</title>
-    <style>
-        .us-page {
-            background:
-                    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                    url('images/Doener1.jpg');
-
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            width: 100%;
-            min-height: 100vh;
-        }
-        body {
 
 
 
-
-
-
-        }
-
-        #ush1 {
-            color: white;
-            margin: 40px 0;
-        }
-
-        h2 {
-            color: #165C26;
-            margin-bottom: 10px;
-        }
-
-        section {
-
-            width: 60%;
-            max-width: 700px;
-
-            background-color: rgba(255, 255, 255, 0.9);
-            color: #222;
-            padding: 20px;
-            margin: 0 auto 25px auto;
-
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-
-            text-align: left;
-
-        }
-    </style>
-</head>
-
-<body id="usbody">
+<div id="usbody">
 <div class="us-page">
 
 <h1 id="ush1">Traditioneller Döner – neu interpretiert</h1>
-
+<div id="us-sections">
 <section class="fleisch">
     <h2 id="ush2">Frisches Fleisch</h2>
     <p>
@@ -112,5 +59,6 @@
     </ul>
 </section>
 </div>
-</body>
-</html>
+</div>
+</div>
+
