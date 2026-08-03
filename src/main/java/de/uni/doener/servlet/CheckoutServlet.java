@@ -23,14 +23,28 @@ public class CheckoutServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        HttpSession session = request.getSession();
+        
+        @SuppressWarnings("unchecked")
+        List<String> cartItems = (List<String>) session.getAttribute("cartItems");
+        
+        // Validate cart is not empty
+        if (cartItems == null || cartItems.isEmpty()) {
+            request.setAttribute("error", "Ihr Einkaufswagen ist leer. Bitte fuegen Sie zuerst Artikel hinzu.");
+            request.getRequestDispatcher("/checkout.jsp").forward(request, response);
+            return;
+        }
+        
         String customerName = trim(request.getParameter("customerName"));
+        String phone = trim(request.getParameter("phone"));
+        String deliveryType = trim(request.getParameter("deliveryType"));
         String street = trim(request.getParameter("street"));
         String houseNumber = trim(request.getParameter("houseNumber"));
         String postalCode = trim(request.getParameter("postalCode"));
         String city = trim(request.getParameter("city"));
         String note = trim(request.getParameter("note"));
 
-        if (customerName.isEmpty() || street.isEmpty() || houseNumber.isEmpty() || postalCode.isEmpty() || city.isEmpty()) {
+        if (customerName.isEmpty() || phone.isEmpty() || deliveryType.isEmpty() || street.isEmpty() || houseNumber.isEmpty() || postalCode.isEmpty() || city.isEmpty()) {
             request.setAttribute("error", "Bitte alle Pflichtfelder ausfuellen.");
             request.getRequestDispatcher("/checkout.jsp").forward(request, response);
             return;
@@ -43,18 +57,15 @@ public class CheckoutServlet extends HttpServlet {
         order.setPostalCode(postalCode);
         order.setCity(city);
         order.setNote(note);
+        order.setPhone(phone);
+        order.setDeliveryType(deliveryType);
 
-        HttpSession session = request.getSession();
         Object cartTotal = session.getAttribute("cartTotal");
         if (cartTotal instanceof BigDecimal) {
             order.setTotalAmount((BigDecimal) cartTotal);
         }
 
-        @SuppressWarnings("unchecked")
-        List<String> cartItems = (List<String>) session.getAttribute("cartItems");
-        if (cartItems != null) {
-            order.setItems(new ArrayList<String>(cartItems));
-        }
+        order.setItems(new ArrayList<String>(cartItems));
 
         @SuppressWarnings("unchecked")
         List<OrderBean> orders = (List<OrderBean>) session.getAttribute("orders");
@@ -65,6 +76,10 @@ public class CheckoutServlet extends HttpServlet {
 
         session.setAttribute("orders", orders);
         session.setAttribute("lastOrder", order);
+        
+        // Clear the cart after successful order
+        session.removeAttribute("cartItems");
+        session.removeAttribute("cartTotal");
 
         response.sendRedirect(request.getContextPath() + "/success.jsp");
     }

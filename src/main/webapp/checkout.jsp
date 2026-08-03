@@ -23,6 +23,16 @@
     <label for="customerName">Name *</label><br/>
     <input type="text" id="customerName" name="customerName" required /><br/><br/>
 
+    <label for="phone">Telefonnummer *</label><br/>
+    <input type="tel" id="phone" name="phone" required /><br/><br/>
+
+    <label for="deliveryType">Lieferart *</label><br/>
+    <select id="deliveryType" name="deliveryType" required>
+        <option value="">-- Bitte wählen --</option>
+        <option value="delivery">Lieferung</option>
+        <option value="pickup">Abholung</option>
+    </select><br/><br/>
+
     <label for="street">Strasse *</label><br/>
     <input type="text" id="street" name="street" required /><br/><br/>
 

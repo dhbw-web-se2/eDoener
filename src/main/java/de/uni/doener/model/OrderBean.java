@@ -15,6 +15,8 @@ public class OrderBean implements Serializable {
     private String postalCode;
     private String city;
     private String note;
+    private String phone;
+    private String deliveryType;
     private LocalDateTime createdAt;
     private BigDecimal totalAmount;
     private List<String> items;
@@ -71,6 +73,22 @@ public class OrderBean implements Serializable {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDeliveryType() {
+        return deliveryType;
+    }
+
+    public void setDeliveryType(String deliveryType) {
+        this.deliveryType = deliveryType;
     }
 
     public LocalDateTime getCreatedAt() {

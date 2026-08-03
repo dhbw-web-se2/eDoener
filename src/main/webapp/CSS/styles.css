@@ -231,7 +231,6 @@ html, body {
     cursor: pointer;
 }
 
-.menu-add-button:hover,
 .menu-add-button:hover {
     filter: brightness(0.95);
 }
@@ -427,4 +426,103 @@ html, body {
 footer img{
     width: 100px;
     height: 100px;
+}
+
+/* impressum.jsp css */
+.impressum-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.impressum-container h1 {
+    color: #165C26;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.impressum-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.impressum-section h2 {
+    color: #1f6b3c;
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.impressum-section p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.impressum-section a {
+    color: #1f6b3c;
+    text-decoration: none;
+}
+
+.impressum-section a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive CSS */
+@media (max-width: 768px) {
+    #navbar {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+    }
+    
+    #navbar img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    #navbar ul {
+        flex-direction: column;
+        gap: 8px;
+        padding-right: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    #navbar ul li {
+        width: 100%;
+    }
+    
+    #navbar ul li a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+    
+    /* Contact section responsive */
+    .conatiner_contact {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .map, .contact {
+        width: 100%;
+    }
+    
+    /* Footer responsive */
+    #footerbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+        text-align: center;
+    }
+    
+    #footerbar img {
+        width: 80px;
+        height: 80px;
+    }
 }

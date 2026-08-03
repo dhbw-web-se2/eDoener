@@ -27,7 +27,8 @@
 }
 
 .checkout-box input,
-.checkout-box textarea {
+.checkout-box textarea,
+.checkout-box select {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
@@ -40,7 +41,8 @@
 }
 
 .checkout-box input:focus,
-.checkout-box textarea:focus {
+.checkout-box textarea:focus,
+.checkout-box select:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(242, 194, 48, 0.35);
 }

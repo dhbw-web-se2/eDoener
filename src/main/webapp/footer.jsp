@@ -19,5 +19,9 @@
             <p>Telefon: +49 721 98765432</p>
             <p>E-Mail: info@edoener.de</p>
         </div>
+        <div id="Rechtliches-footer">
+            <h3>Rechtliches</h3>
+            <p><a href="${pageContext.request.contextPath}/impressum.jsp">Impressum</a></p>
+        </div>
     </footer>
 </div>
