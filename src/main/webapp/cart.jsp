@@ -31,18 +31,26 @@
         <c:otherwise>
             <c:forEach items="${sessionScope.cart.items}" var="item">
                 <section class="cart-item">
-                    <div class="cart-item-info">
-                        <h2><c:out value="${item.name}" /></h2>
-                        <p>
-                            Einzelpreis:
-                            <fmt:formatNumber value="${item.price}" minFractionDigits="2" maxFractionDigits="2" /> €
-                        </p>
-                        <p>
-                            Zwischensumme:
-                            <strong>
-                                <fmt:formatNumber value="${item.subtotal}" minFractionDigits="2" maxFractionDigits="2" /> €
-                            </strong>
-                        </p>
+                    <div class="cart-item-product">
+                        <c:if test="${not empty item.imagePath}">
+                            <img class="cart-item-image"
+                                 src="${pageContext.request.contextPath}/${item.imagePath}"
+                                 alt="${item.name}">
+                        </c:if>
+
+                        <div class="cart-item-info">
+                            <h2><c:out value="${item.name}" /></h2>
+                            <p>
+                                Einzelpreis:
+                                <fmt:formatNumber value="${item.price}" minFractionDigits="2" maxFractionDigits="2" /> €
+                            </p>
+                            <p>
+                                Zwischensumme:
+                                <strong>
+                                    <fmt:formatNumber value="${item.subtotal}" minFractionDigits="2" maxFractionDigits="2" /> €
+                                </strong>
+                            </p>
+                        </div>
                     </div>
 
                     <div class="cart-actions">
