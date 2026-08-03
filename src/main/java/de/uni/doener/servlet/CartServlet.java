@@ -2,6 +2,8 @@ package de.uni.doener.servlet;
 
 import de.uni.doener.model.CartBean;
 import de.uni.doener.model.CartItemBean;
+import de.uni.doener.model.MenuBean;
+import de.uni.doener.model.MenuItemBean;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -53,7 +55,7 @@ public class CartServlet extends HttpServlet {
 
         // Nach einem POST wird erneut die Warenkorbseite aufgerufen.
         // Dadurch wird ein doppeltes Absenden beim Aktualisieren verhindert.
-        response.sendRedirect(request.getContextPath() + "/cart");
+        response.sendRedirect(getReturnTo(request));
     }
 
     private CartBean getCart(HttpSession session) {
@@ -69,8 +71,10 @@ public class CartServlet extends HttpServlet {
 
     private void addProduct(HttpServletRequest request, CartBean cart) {
         String productId = request.getParameter("productId");
-        String name = request.getParameter("name");
-        String priceText = request.getParameter("price");
+        MenuItemBean menuItem = new MenuBean().getItemById(productId);
+
+        String name = menuItem != null ? menuItem.getName() : request.getParameter("name");
+        String priceText = menuItem != null ? menuItem.getBasePrice().toPlainString() : request.getParameter("price");
 
         if (isEmpty(productId) || isEmpty(name) || isEmpty(priceText)) {
             return;
@@ -121,5 +125,15 @@ public class CartServlet extends HttpServlet {
 
     private boolean isEmpty(String value) {
         return value == null || value.trim().isEmpty();
+    }
+
+    private String getReturnTo(HttpServletRequest request) {
+        String returnTo = request.getParameter("returnTo");
+
+        if (!isEmpty(returnTo)) {
+            return returnTo;
+        }
+
+        return request.getContextPath() + "/cart";
     }
 }

@@ -22,7 +22,7 @@
         <c:when test="${empty sessionScope.cart.items}">
             <div class="cart-empty">
                 <p>Dein Warenkorb ist noch leer.</p>
-                <a class="cart-link" href="${pageContext.request.contextPath}/menu.jsp">
+                <a class="cart-link" href="${pageContext.request.contextPath}/menu">
                     Zur Speisekarte
                 </a>
             </div>

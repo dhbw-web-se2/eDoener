@@ -7,7 +7,7 @@
     </a>
     <ul>
       <li><a href="${pageContext.request.contextPath}/homepage.jsp#us">Über uns</a></li>
-      <li><a href="${pageContext.request.contextPath}/menu.jsp">Menü</a></li>
+      <li><a href="${pageContext.request.contextPath}/menu">Menü</a></li>
       <li><a href="${pageContext.request.contextPath}/cart">Warenkorb</a></li>
       <li><a href="${pageContext.request.contextPath}/homepage.jsp#contact">Kontakt</a></li>
     </ul>
