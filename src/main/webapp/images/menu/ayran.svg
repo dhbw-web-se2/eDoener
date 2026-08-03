@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+  <title id="title">Ayran</title>
+  <rect width="640" height="360" fill="#eaf4f5"/>
+  <path d="M235 75h170l-20 235H255z" fill="#fff" stroke="#4e8795" stroke-width="10"/>
+  <path d="M247 150h146l-5 55H252z" fill="#65a8b7"/>
+  <path d="M270 173c35-30 65 30 100 0" fill="none" stroke="#fff" stroke-width="10"/>
+  <ellipse cx="320" cy="78" rx="86" ry="20" fill="#dfecee" stroke="#4e8795" stroke-width="8"/>
+</svg>

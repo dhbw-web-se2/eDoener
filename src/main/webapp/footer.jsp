@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div id="footerhtml">
     <footer id="footerbar">
-        <img src="images/Logo.png" alt="Logo des Restaurants">
+        <img src="${pageContext.request.contextPath}/images/Logo.webp" alt="Logo des Restaurants">
         <div id="Adresse-footer">
             <h3>Adresse</h3>
             <p>Waldstr. 36</p>
@@ -18,6 +18,10 @@
             <h3>Kontakt</h3>
             <p>Telefon: +49 721 98765432</p>
             <p>E-Mail: info@edoener.de</p>
+        </div>
+        <div id="Rechtliches-footer">
+            <h3>Rechtliches</h3>
+            <p><a href="${pageContext.request.contextPath}/impressum.jsp">Impressum</a></p>
         </div>
     </footer>
 </div>

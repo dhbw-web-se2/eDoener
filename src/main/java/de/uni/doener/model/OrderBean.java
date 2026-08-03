@@ -3,6 +3,7 @@ package de.uni.doener.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,8 @@ public class OrderBean implements Serializable {
     private String postalCode;
     private String city;
     private String note;
+    private String phone;
+    private String deliveryType;
     private LocalDateTime createdAt;
     private BigDecimal totalAmount;
     private List<String> items;
@@ -73,6 +76,22 @@ public class OrderBean implements Serializable {
         this.note = note;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDeliveryType() {
+        return deliveryType;
+    }
+
+    public void setDeliveryType(String deliveryType) {
+        this.deliveryType = deliveryType;
+    }
+
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
@@ -98,8 +117,23 @@ public class OrderBean implements Serializable {
     }
 
     public String getDeliveryAddress() {
+        if ("pickup".equals(deliveryType)) {
+            return "Abholung im Restaurant";
+        }
+
         return (street == null ? "" : street) + " " + (houseNumber == null ? "" : houseNumber)
                 + ", " + (postalCode == null ? "" : postalCode) + " " + (city == null ? "" : city);
     }
-}
 
+    public String getDeliveryTypeLabel() {
+        return "pickup".equals(deliveryType) ? "Abholung" : "Lieferung";
+    }
+
+    public String getCreatedAtFormatted() {
+        if (createdAt == null) {
+            return "";
+        }
+
+        return createdAt.format(DateTimeFormatter.ofPattern("dd.MM.yyyy, HH:mm"));
+    }
+}

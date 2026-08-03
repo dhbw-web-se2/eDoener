@@ -1,16 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/styles.css">
     <title>Homepage</title>
-    <style>
-        #us{
-                margin-top: 120px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-        }
-    </style>
 </head>
     <body class="page-enter">
     <script>

@@ -15,24 +15,23 @@
 </div>
     <div class="conatiner_contact">
     <div class="map">
-    <img id="map-img" src="images/Map.png" alt="Standort des Geschäfts: Waldstr. 36, 76133 Karlsruhe">
+    <img id="map-img" src="images/Map.webp" alt="Standort des Geschäfts: Waldstr. 36, 76133 Karlsruhe">
     </div>
     <div class="contact">
     <form method="post" action="${pageContext.request.contextPath}/ContactServlet">
         <div class="row">
-        <input type="text" name="vorname" placeholder="Vorame *" required>
+        <input type="text" name="vorname" placeholder="Vorname *" required>
         <input type="text" name="nachname" placeholder="Nachname *" required><br>
         </div>
         <div class="row">
-        <input type="text" placeholder="Email *" required>
-        <input type="text" placeholder="Telefonnummer"><br>
+        <input type="email" name="email" placeholder="E-Mail *" required>
+        <input type="tel" name="telefonnummer" placeholder="Telefonnummer"><br>
         </div>
         <input type="text" class="full" name="betreff" placeholder="Betreff *" required><br>
-        <textarea class="full" placeholder="Ihre Nachricht *" required></textarea>
+        <textarea class="full" name="nachricht" placeholder="Ihre Nachricht *" required></textarea>
         <button type="submit">Senden</button>
     </form>
     </div>
     </div>
 </div>
 </div>
-

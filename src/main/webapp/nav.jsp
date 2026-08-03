@@ -3,7 +3,7 @@
 <div id="navbarhtml">
   <nav id="navbar">
     <a href="${pageContext.request.contextPath}/start.jsp">
-      <img src="${pageContext.request.contextPath}/images/Logo.png" alt="Logo">
+      <img src="${pageContext.request.contextPath}/images/Logo.webp" alt="Logo">
     </a>
     <ul>
       <li><a href="${pageContext.request.contextPath}/homepage.jsp#us">Über uns</a></li>

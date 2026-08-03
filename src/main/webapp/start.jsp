@@ -1,7 +1,10 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Willkommen bei eDöner!</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <style>
@@ -29,7 +32,7 @@
         <div class="wrap">
 
             <div class="container">
-                <img id="Logo" src="images/Logo.png" alt="Logo">
+                <img id="Logo" src="images/Logo.webp" alt="Logo">
 
                 <div class="openings">
                     <h2 id="starth2">Öffnungszeiten</h2>

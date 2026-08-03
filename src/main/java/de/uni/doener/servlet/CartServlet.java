@@ -73,8 +73,31 @@ public class CartServlet extends HttpServlet {
         String productId = request.getParameter("productId");
         MenuItemBean menuItem = new MenuBean().getItemById(productId);
 
-        String name = menuItem != null ? menuItem.getName() : request.getParameter("name");
-        String priceText = menuItem != null ? menuItem.getBasePrice().toPlainString() : request.getParameter("price");
+        if (menuItem == null) {
+            return;
+        }
+
+        String name = menuItem.getName();
+        String priceText = menuItem.getBasePrice().toPlainString();
+
+        if (menuItem.isCustomizable()) {
+            String meat = menuItem.isVegetarian()
+                    ? "Falafel"
+                    : allowedValue(request.getParameter("meat"), "Kalb", "Kalb", "Hähnchen");
+            String sauce = allowedValue(request.getParameter("sauce"), "Kräuter", "Kräuter", "Knoblauch", "Scharf", "Ohne Soße");
+            String spice = allowedValue(request.getParameter("spice"), "Mild", "Mild", "Mittel", "Scharf");
+            boolean extraCheese = "true".equals(request.getParameter("extraCheese"));
+
+            StringBuilder options = new StringBuilder();
+            options.append(meat).append(", ").append(sauce).append(", ").append(spice);
+            if (extraCheese) {
+                options.append(", extra Käse");
+                priceText = menuItem.getBasePrice().add(new BigDecimal("1.00")).toPlainString();
+            }
+
+            name = menuItem.getName() + " (" + options + ")";
+            productId = menuItem.getProductId() + "|" + meat + "|" + sauce + "|" + spice + "|" + extraCheese;
+        }
 
         if (isEmpty(productId) || isEmpty(name) || isEmpty(priceText)) {
             return;
@@ -129,11 +152,27 @@ public class CartServlet extends HttpServlet {
 
     private String getReturnTo(HttpServletRequest request) {
         String returnTo = request.getParameter("returnTo");
+        String menuPath = request.getContextPath() + "/menu";
+        String cartPath = request.getContextPath() + "/cart";
 
-        if (!isEmpty(returnTo)) {
-            return returnTo;
+        if (menuPath.equals(returnTo)) {
+            return menuPath;
         }
 
-        return request.getContextPath() + "/cart";
+        if (cartPath.equals(returnTo)) {
+            return cartPath;
+        }
+
+        return cartPath;
+    }
+
+    private String allowedValue(String value, String defaultValue, String... allowedValues) {
+        for (String allowedValue : allowedValues) {
+            if (allowedValue.equals(value)) {
+                return allowedValue;
+            }
+        }
+
+        return defaultValue;
     }
 }
