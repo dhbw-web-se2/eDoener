@@ -41,7 +41,7 @@ public class MenuBean implements Serializable {
                 "Klassiker",
                 "Die beliebtesten eDöner-Standards für den schnellen Hunger.");
         MenuItemBean doenerClassic = new MenuItemBean("doener-classic", "Döner Classic", "Knuspriges Brot, frischer Salat und Kalbfleisch.", new BigDecimal("7.50"));
-        doenerClassic.setImagePath("images/menu/doener.webp");
+        doenerClassic.setImagePath("images/menu/doener.jpg");
         doenerClassic.setBadgeLabel("Beliebt");
         doenerClassic.setCustomizable(true);
         doenerClassic.addIngredient("Fladenbrot");
@@ -53,7 +53,7 @@ public class MenuBean implements Serializable {
         classics.addItem(doenerClassic);
 
         MenuItemBean doenerCheese = new MenuItemBean("doener-cheese", "Döner mit Käse", "Unser Classic plus extra geschmolzener Käse.", new BigDecimal("8.50"));
-        doenerCheese.setImagePath("images/menu/doener.webp");
+        doenerCheese.setImagePath("images/menu/doener.jpg");
         doenerCheese.setCustomizable(true);
         doenerCheese.addIngredient("Fladenbrot");
         doenerCheese.addIngredient("Kalbfleisch");
@@ -64,7 +64,7 @@ public class MenuBean implements Serializable {
         classics.addItem(doenerCheese);
 
         MenuItemBean yufkaClassic = new MenuItemBean("yufka-classic", "Yufka / Dürüm", "Wahlweise mit Kalb oder Hähnchen im dünnen Yufka-Fladen.", new BigDecimal("8.20"));
-        yufkaClassic.setImagePath("images/menu/yufka.webp");
+        yufkaClassic.setImagePath("images/menu/yufka.jpg");
         yufkaClassic.setCustomizable(true);
         yufkaClassic.addIngredient("Yufka");
         yufkaClassic.addIngredient("Kalbfleisch");
@@ -75,7 +75,7 @@ public class MenuBean implements Serializable {
         classics.addItem(yufkaClassic);
 
         MenuItemBean doenerPlate = new MenuItemBean("doener-plate", "Döner Teller", "Dönerfleisch mit Salat, Pommes und Soße.", new BigDecimal("10.50"));
-        doenerPlate.setImagePath("images/menu/doener.webp");
+        doenerPlate.setImagePath("images/menu/doener-teller.jpg");
         doenerPlate.setBadgeLabel("Angebot");
         doenerPlate.setCustomizable(true);
         doenerPlate.addIngredient("Kalbfleisch");
@@ -90,7 +90,7 @@ public class MenuBean implements Serializable {
                 "Vegetarisch",
                 "Leichte Alternativen mit Falafel und Gemüse.");
         MenuItemBean doenerVegetarisch = new MenuItemBean("doener-vegetarisch", "Döner vegetarisch", "Vegetarische Variante mit Falafel und frischem Gemüse.", new BigDecimal("6.90"));
-        doenerVegetarisch.setImagePath("images/menu/falafel.svg");
+        doenerVegetarisch.setImagePath("images/menu/falafel.jpg");
         doenerVegetarisch.setVegetarian(true);
         doenerVegetarisch.setCustomizable(true);
         doenerVegetarisch.addIngredient("Fladenbrot");
@@ -101,7 +101,7 @@ public class MenuBean implements Serializable {
         veggie.addItem(doenerVegetarisch);
 
         MenuItemBean yufkaVegetarisch = new MenuItemBean("yufka-vegetarisch", "Yufka vegetarisch", "Frische Gemüsefüllung mit Hummus und Kräutern.", new BigDecimal("7.20"));
-        yufkaVegetarisch.setImagePath("images/menu/falafel.svg");
+        yufkaVegetarisch.setImagePath("images/menu/falafel.jpg");
         yufkaVegetarisch.setVegetarian(true);
         yufkaVegetarisch.setCustomizable(true);
         yufkaVegetarisch.addIngredient("Yufka");
@@ -116,14 +116,14 @@ public class MenuBean implements Serializable {
                 "Snacks",
                 "Perfekt zum Teilen oder für den kleinen Extra-Hunger.");
         MenuItemBean pommes = new MenuItemBean("pommes", "Pommes", "Goldgelb frittiert und schön knusprig.", new BigDecimal("3.50"));
-        pommes.setImagePath("images/menu/pommes.svg");
+        pommes.setImagePath("images/menu/pommes.jpg");
         pommes.setVegetarian(true);
         pommes.addIngredient("Kartoffeln");
         pommes.addIngredient("Pflanzenöl");
         snacks.addItem(pommes);
 
         MenuItemBean baklava = new MenuItemBean("baklava", "Baklava", "Süßes Dessert mit Honig und Pistazien.", new BigDecimal("3.20"));
-        baklava.setImagePath("images/menu/baklava.svg");
+        baklava.setImagePath("images/menu/baklava.jpg");
         baklava.setVegetarian(true);
         baklava.addIngredient("Teig");
         baklava.addIngredient("Honig");
@@ -137,7 +137,7 @@ public class MenuBean implements Serializable {
                 "Getränke",
                 "Kalte Begleiter für dein Menü.");
         MenuItemBean ayran = new MenuItemBean("ayran", "Ayran", "Erfrischend und klassisch zum Döner.", new BigDecimal("2.00"));
-        ayran.setImagePath("images/menu/ayran.svg");
+        ayran.setImagePath("images/menu/ayran.jpg");
         ayran.setVegetarian(true);
         ayran.addIngredient("Joghurt");
         ayran.addIngredient("Wasser");
@@ -146,7 +146,7 @@ public class MenuBean implements Serializable {
         drinks.addItem(ayran);
 
         MenuItemBean cola = new MenuItemBean("cola", "Cola", "0,33 l gekühlt serviert.", new BigDecimal("2.50"));
-        cola.setImagePath("images/menu/cola.svg");
+        cola.setImagePath("images/menu/cola.jpg");
         cola.setVegetarian(true);
         cola.addIngredient("Getränk");
         drinks.addItem(cola);

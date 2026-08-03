@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
-  <title id="title">Cola</title>
-  <rect width="640" height="360" fill="#f4e7df"/>
-  <path d="M263 65h122l-10 244H273z" fill="#bd2f2f" stroke="#742020" stroke-width="9"/>
-  <path d="M294 70l80-41" stroke="#742020" stroke-width="12" stroke-linecap="round"/>
-  <ellipse cx="324" cy="68" rx="63" ry="17" fill="#d85151" stroke="#742020" stroke-width="8"/>
-  <path d="M276 168c42-33 73 39 106 0" fill="none" stroke="#fff" stroke-width="12"/>
-</svg>
