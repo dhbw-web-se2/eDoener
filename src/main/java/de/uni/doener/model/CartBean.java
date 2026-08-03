@@ -23,12 +23,19 @@ public class CartBean implements Serializable {
     }
 
     public void addItem(String productId, String name, BigDecimal price) {
+        addItem(productId, name, price, null);
+    }
+
+    public void addItem(String productId, String name, BigDecimal price, String imagePath) {
         CartItemBean existingItem = findItem(productId);
 
         if (existingItem == null) {
-            items.add(new CartItemBean(productId, name, price, 1));
+            items.add(new CartItemBean(productId, name, price, 1, imagePath));
         } else {
             existingItem.setQuantity(existingItem.getQuantity() + 1);
+            if (existingItem.getImagePath() == null && imagePath != null) {
+                existingItem.setImagePath(imagePath);
+            }
         }
     }
 

@@ -107,7 +107,7 @@ public class CartServlet extends HttpServlet {
             BigDecimal price = new BigDecimal(priceText.replace(',', '.'));
 
             if (price.compareTo(BigDecimal.ZERO) >= 0) {
-                cart.addItem(productId, name, price);
+                cart.addItem(productId, name, price, menuItem.getImagePath());
             }
         } catch (NumberFormatException ignored) {
             // Ungueltige Preise werden nicht in den Warenkorb aufgenommen.

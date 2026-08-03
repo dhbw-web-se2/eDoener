@@ -13,6 +13,7 @@ public class CartItemBean implements Serializable {
     private String name;
     private BigDecimal price;
     private int quantity;
+    private String imagePath;
 
     public CartItemBean() {
         this.price = BigDecimal.ZERO;
@@ -20,10 +21,15 @@ public class CartItemBean implements Serializable {
     }
 
     public CartItemBean(String productId, String name, BigDecimal price, int quantity) {
+        this(productId, name, price, quantity, null);
+    }
+
+    public CartItemBean(String productId, String name, BigDecimal price, int quantity, String imagePath) {
         this.productId = productId;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+        this.imagePath = imagePath;
     }
 
     public String getProductId() {
@@ -56,6 +62,14 @@ public class CartItemBean implements Serializable {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public BigDecimal getSubtotal() {

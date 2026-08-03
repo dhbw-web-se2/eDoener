@@ -21,6 +21,15 @@ class CartBeanTest {
     }
 
     @Test
+    void storesProductImageForCheckout() {
+        CartBean cart = new CartBean();
+
+        cart.addItem("doener", "Döner", new BigDecimal("7.50"), "images/menu/doener.jpg");
+
+        assertEquals("images/menu/doener.jpg", cart.getItems().get(0).getImagePath());
+    }
+
+    @Test
     void totalPriceUsesQuantity() {
         CartBean cart = new CartBean();
 
